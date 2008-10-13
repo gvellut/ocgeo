@@ -1,8 +1,34 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>OpenCalais Geo Tutorial</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAzMUFFnT9uH0xq39J0Y4kbhTwM0brOpm-All5BF6PoaKBxRWWERSRjUkA6ZkeIcCmkdyXUpKpJRijyw"></script>
+<script type="text/javascript" src="OpenLayers.js"></script>
+<script type="text/javascript" src="processing.js"></script>
+<script type="text/javascript">
+var map;
+window.onload = function(){
+  map = new OpenLayers.Map('map');
+  var google = new OpenLayers.Layer.Google( "Google Hybrid" , {type: G_HYBRID_MAP });
+  map.addLayer(google);
+  map.zoomToMaxExtent();
+}
+</script>
 </head>
-<body>
-
+<body on load>
+  <div id="main">
+    <div id="form" >
+      <label for="text">Text:</label>
+      <br/>
+      <textarea name="text" id="text" rows="12" cols="50" ></textarea>
+      <br/>
+      <input type="button" name="button" value="Submit"
+      onclick="submitToOC();" />
+    </div>
+    <div id="mapContainer"><div id="map"></div></div>
+    <div id="footer"><a href="http://gvlt.wordpress.com">Leveraging
+      Visionary Paradigms</a></div>
+  </div>
 </body>
 </html>

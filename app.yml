@@ -1,0 +1,17 @@
+application: calaistut
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /opencalais-geo/(.*\.(html|css|js))
+  static_files: opencalais-geo/static/\1
+  upload: opencalais-geo/static/(.*)
+- url: /opencalais-geo/img
+  static_dir: opencalais-geo/static/img
+- url: /opencalais-geo/theme
+  static_dir: opencalais-geo/static/theme
+
+- url: /opencalais-geo/.*
+  script: opencalais-geo/app.py
+

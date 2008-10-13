@@ -1,0 +1,42 @@
+body {
+    background-color: #888;
+    font-family:Arial;
+    font-size: 20px;
+    margin: 25px;
+}
+
+#main {
+    margin: 0;
+    margin-bottom:10px;
+    background-color:#eee;
+    border: 5px solid #333;
+    padding: 25px;
+}
+
+#form {
+    border: none;
+    text-align: left;
+    padding-bottom:25px;
+    margin: 0 auto;
+    float:left;
+}
+
+#text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#mapContainer {
+    text-align:center;
+    width:620px;
+    height:500px;
+    float:right;
+    margin-bottom: 20px;
+}
+
+#footer {
+    clear:both;
+    text-align:center;
+    font-size:12px;
+    margin-top: 25px;
+}
