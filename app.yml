@@ -11,7 +11,6 @@ handlers:
   static_dir: opencalais-geo/static/img
 - url: /opencalais-geo/theme
   static_dir: opencalais-geo/static/theme
-
 - url: /opencalais-geo/.*
   script: opencalais-geo/app.py
 
