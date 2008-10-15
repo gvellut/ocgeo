@@ -30,8 +30,7 @@ class OCProxy(webapp.RequestHandler):
       else:
           self.response.out.write('"error"')
       
-application = webapp.WSGIApplication([('/.*', OCProxy)],
-                                     debug=True)
+application = webapp.WSGIApplication([('/.*/ocproxy', OCProxy)])
 
 def main():
   run_wsgi_app(application)
