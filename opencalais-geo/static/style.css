@@ -19,6 +19,33 @@ body {
     border: none;
     text-align: left;
     padding-bottom:25px;
+    float:left;
+    width:435px;
+    height:220px;
+}
+
+#result {
+    border: none;
+    text-align: left;
+    padding-bottom:25px;
+    float:right;
+    width:435px;
+    height:220px;
+    margin-bottom:25px;
+}
+
+#resultText {
+    border:1px solid grey;
+    background-color:white;
+    height:183px;
+    font-size:14px;
+    padding: 1px;
+    overflow-y:auto;
+}
+
+#log {
+    font-size:12px;
+    
 }
 
 #text {
@@ -30,6 +57,7 @@ body {
     width: 100% ;
     height:300px;
     margin-bottom: 20px;
+    clear:both;
 }
 
 #footer {
