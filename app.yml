@@ -4,6 +4,9 @@ runtime: python
 api_version: 1
 
 handlers:
+- url: /opencalais-geo/
+  static_files: opencalais-geo/static/index.html
+  upload: opencalais-geo/static/index.html
 - url: /opencalais-geo/(.*\.(html|css|js))
   static_files: opencalais-geo/static/\1
   upload: opencalais-geo/static/(.*)
@@ -11,6 +14,6 @@ handlers:
   static_dir: opencalais-geo/static/img
 - url: /opencalais-geo/theme
   static_dir: opencalais-geo/static/theme
-- url: /opencalais-geo/.*
+- url: /opencalais-geo/.+
   script: opencalais-geo/app.py
 
