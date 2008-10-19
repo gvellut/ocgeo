@@ -8,15 +8,13 @@ OCURL = "http://beta.opencalais.com/enlighten/rest/"
 LICENSEID = "cj6s8bbfhpn36nhvfkvnhqm6"
 
 class OCProxy(webapp.RequestHandler):
-  def get(self):
-      str_ocargs = self.encoded_args()
-      result = urlfetch.fetch(OCURL + "?licenseID=%s&%s" % (LICENSEID, str_ocargs) ,method = urlfetch.GET)
-      self.write_response(result)
-          
   def post(self):
+    try:
       str_ocargs = self.encoded_args()
       result = urlfetch.fetch(OCURL, "licenseID=%s&%s" % (LICENSEID, str_ocargs) , urlfetch.POST)
       self.write_response(result)
+    except:
+      self.response.out.write('"error"')
 
   def encoded_args(self):
       ocargs = {}

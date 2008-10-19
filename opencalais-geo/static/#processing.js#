@@ -148,14 +148,14 @@ function getInstances(entities){
 
 function sortInstances(instances){
   return instances.sort(function(a,b){
-      return a.offset - b.offset;});
+      return b.offset - a.offset;});
 }
 
 function createTextAndMarkers(text,sInstances){
   var icons = createIcons();
   var hasRes = 0;
   var hasNoRes = 0;
-  for(var i = sInstances.length - 1 ; i >= 0 ; i--){
+  for(var i = 0  ; i < sInstances.length ; i++){
      var instance = sInstances[i];
      if(instance.detail && instance.detail.longitude != undefined){
        text = text.substr(0,instance.offset) + 
